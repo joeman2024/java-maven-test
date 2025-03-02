@@ -12,7 +12,7 @@ pipeline {
             post {
                 success {
                     echo 'Build success'
-                    archiveArtifacts artifacts: '**/target/*.war', onlyIfSuccessful: true
+                    archiveArtifacts artifacts: '**/target/*.war', 
                 }
                 failure {
                     echo 'Build failed'
