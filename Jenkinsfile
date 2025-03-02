@@ -25,11 +25,5 @@ pipeline {
                 deploy adapters: [tomcat9(credentialsId: 'tomcatserver', path: '', url: 'http://3.129.87.121:8080/')], contextPath: null, war: '**/*.war'
             }
         }
-        stage('Test') {
-            steps {
-                echo 'Testing the project...'
-                // Add your test steps here
-            }
-        }
     }
 }
