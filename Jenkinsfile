@@ -22,7 +22,7 @@ pipeline {
         stage('Deploy to Tomcat') {
             steps {
                 echo 'Deploying the project...'
-                sh 'cp -r target/*.war /opt/tomcat/webapps'
+                sh 'cp -r target/*.war /opt/apache-tomcat-9.0.100/webapps'
             }
         }
         stage('Test') {
